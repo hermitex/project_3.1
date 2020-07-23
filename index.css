@@ -115,6 +115,15 @@ a.block{
 .media img{
     width: 2rem;
 }
+
+a.morelink {
+	text-decoration:none;
+	outline: none;
+}
+.morecontent span {
+	display: none;
+
+}
   /* MEDIA QUERIES */
   
   @media screen and (max-width: 650px) {

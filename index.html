@@ -152,7 +152,7 @@
         <ul class="list-unstyled">
             <li class="media">
                 <img src="./images/news/music.jpg" class="mr-3" alt="...">
-                <div class="media-body">
+                <div class="media-body news-item more">
                     <h5 class="mt-0 mb-1">List-based media object</h5>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
                     purus
@@ -162,7 +162,7 @@
             </li>
             <li class="media my-4">
                 <img src="./images/news/watchout.jpg" class="mr-3" alt="...">
-                <div class="media-body">
+                <div class="media-body news-item more">
                     <h5 class="mt-0 mb-1">List-based media object</h5>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
                     purus
@@ -172,7 +172,7 @@
             </li>
             <li class="media">
                 <img src="./images/news/black.jpg" class="mr-3" alt="...">
-                <div class="media-body">
+                <div class="media-body news-item more">
                     <h5 class="mt-0 mb-1">List-based media object</h5>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
                     purus
@@ -196,6 +196,43 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <script src="./js/clock.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            console.log(1232)
+            var showChar = 100;
+            var ellipsestext = "...";
+            var moretext = "more";
+            var lesstext = "less";
+            $('.more').each(function () {
+                var content = $(this).html();
+
+                if (content.length > showChar) {
+
+                    var c = content.substr(0, showChar);
+                    var h = content.substr(showChar - 1, content.length - showChar);
+
+                    var html = c + '<span class="moreelipses">' + ellipsestext + '</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+                    $(this).html(html);
+                }
+
+            });
+
+            $(".morelink").click(function () {
+                if ($(this).hasClass("less")) {
+                    $(this).removeClass("less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>
