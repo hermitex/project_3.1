@@ -1,0 +1,9 @@
+.about{  
+    border: 0.1px solid #17a2b8;
+    border-radius: 1rem !important;
+    line-height: 2rem;
+   margin-bottom: 5rem !important;
+}
+.about p{  
+    padding: 0.5rem;
+ }
