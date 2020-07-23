@@ -107,6 +107,14 @@ a.block{
     background-color: #0a0a0a;
 }
 
+/* NEWS */
+.event-news{
+    background-color: #0a0a0a;
+    color: #fff;
+}
+.media img{
+    width: 2rem;
+}
   /* MEDIA QUERIES */
   
   @media screen and (max-width: 650px) {
