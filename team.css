@@ -1,4 +1,6 @@
-
+body{ 
+    font-family: 'B612', sans-serif;
+}
 .profile img{
     width: 8rem;
     height: 8rem;
