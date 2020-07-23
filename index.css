@@ -124,6 +124,42 @@ a.morelink {
 	display: none;
 
 }
+
+#info .row>div{  
+    background-color: #0a0a0a;
+    border: 1px dashed #17a2b8;
+    margin:  auto;
+    width: 100% !important;
+  }
+  /* END INFO */
+  .films{
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+     
+  }
+  .details{
+      width: 100%;
+     
+  }
+  .film-info>img{
+      width: 100%;   
+    min-height: 217.490px;
+   
+  }
+  .film-info{    
+      margin-bottom: 1rem;
+      background-color: teal;
+  }
+  
+  
+  .bg-light-blue{
+      background-color:#17a2b8;    
+  }
   /* MEDIA QUERIES */
   
   @media screen and (max-width: 650px) {
