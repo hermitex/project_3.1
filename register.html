@@ -12,7 +12,7 @@
     <!-- Custom CSS -->
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="header&footer.css">
-    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./register.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/bcbb5e63ec.js" crossorigin="anonymous" SameSite SameSite=None></script>
     <title>Watch it Outside</title>
@@ -32,10 +32,10 @@
                     <a class="nav-link" href="index.html">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="about.html">About Us </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="team.html">Our Team</a>
+                    <a class="nav-link" href="team.html">Our Team <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -49,7 +49,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="register.html">Register</a>
+                    <a class="nav-link" href="#">Register</a>
                 </li>
 
             </ul>
@@ -60,75 +60,43 @@
         </div>
     </nav>
 
-    <div class="container-fluid p-0">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner slide-image">
-                <div id="slide-image" class="carousel-item active">
-                    <img class="d-block w-100 " src="./images/film.jpg" alt=" Card image" style="width: 100%;">
-                    <div class="card-img-overlay mt-5">
-                        <h2 class="card-title text-light card-img-opacity">Our Style Is Different... We
-                            Watch
-                            It Outside </h2>
-                        <!-- <div class="text-center">
-                            <a href="#more" class="btn btn-success ">Read More</a>
-                        </div> -->
-
-                    </div>
-
-                </div>
-                <div id="slide-image" class="carousel-item">
-                    <img class="d-block w-100 " src="./images/cinema.jpg" alt=" Card image" style="width: 100%;">
-                    <div class="card-img-overlay mt-5">
-                        <h2 class="card-title text-light card-img-opacity">We Listen To Your Desires &
-                            Play
-                            Just the Right Films For You! </h2>
-                        <!-- <div class="text-center">
-                            <a href="#more" class="btn btn-success ">Read More</a>
-                        </div> -->
-                    </div>
-
-                </div>
-                <div id="slide-image" class="carousel-item">
-                    <img class="d-block w-100 " src="./images/godfather.jpg" alt=" Card image" style="width: 100%;">
-                    <div class="card-img-overlay mt-5">
-                        <h2 class="card-title text-light card-img-opacity">We Are The First To Play The
-                            Best
-                            Films In Town</h2>
-                        <!-- <div class="text-center">
-                            <a href="#more" class="btn btn-success ">Read More</a>
-                        </div> -->
-                    </div>
-
-                </div>
-
-            </div>
+    <div class="container-fluid">
+        <div class="mt">
+            <h1 id="days-to-go" class="text-center bg-dark p-1" style="color: yellow;   border-radius: 10px;"></h1>
+            <h1 class="text-primary text-center">Book Your Slot Today</h1>
         </div>
-    </div>
 
-    <div id="more" class="container">
-        <div class="about-content bg-black">
-            <div class="about text-light m-3 p-2">
-                <h3 class="text-primary text-center">About Us</h3>
-                <p>Welcome to Watch It Outside, your number one source for the best film event shows. We're
-                    dedicated to giving you the very best of films, with a focus on three
-                    characteristics, ie: dependability, customer service and uniqueness.
-                    Founded in 2002 by Tiberius, Watch It Outside has come a long way from its beginnings in a
-                    toolshed, Houston, TX. When Tiberius first started
-                    out, his passion for helping film lovers to enjoy their best fims in a unique and more
-                    eco-friendly manner,
-                    drove him to research on the best yet simple way to host film events, and gave him the impetus
-                    to turn hard work and inspiration into to
-                    one of the leading film show event agency. We now host our events all over the world, and are
-                    thrilled to be a part of the eco-friendly wing of the entertainment industry.
-
-                    We hope you enjoy our events as much as we enjoy offering them to you. If you have any
-                    questions or comments, please don't hesitate to contact us.
-
-                    Sincerely,
-                    Tiberius, Founder</p>
+        <form>
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" class="form-control" aria-describedby="first-name"
+                    placeholder="Enter First Name" required>
             </div>
 
-        </div>
+            <div class="form-group">
+                <label for="second-name">Second Name</label>
+                <input type="text" id="second-name" class="form-control" aria-describedby="second-name"
+                    placeholder="Enter Second Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" aria-describedby="email-address"
+                    placeholder="Email Address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" aria-describedby="phone-number"
+                    placeholder="Phone Number" required>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check">
+                <label class="form-check-label" for="check">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Book</button>
+        </form>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -141,7 +109,37 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <!-- <script src="./js/clock.js"></script> -->
+
+    <script>
+        // COUNT DOWN
+
+        const daysToGo = document.getElementById('days-to-go');
+
+
+        //time to count down to
+        const lauchTime = new Date("Aug 5, 2020 18:00:00").getTime();
+        const showCountDown = setInterval(() => {
+            //get current time
+            const now = new Date().getTime();
+            //get time remaining till launch time
+            const timeLength = lauchTime - now;
+
+            const days = Math.floor((timeLength / (1000 * 60 * 60 * 24)));
+            //	console.log(days );
+            const hours = Math.floor((timeLength % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            //console.log(hours);
+            const mins = Math.floor((timeLength % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((timeLength % (1000 * 60)) / 1000);
+            // console.log(secs);	
+            daysToGo.innerHTML = `${days} days to go!`;
+            if (timeLength < 0) {
+                clearInterval(showCountDown);
+                countDown.style.display = "none";
+                document.getElementById("comingsoon").style.color = "#17a2b8";
+                document.getElementById("comingsoon").innerHTML = "Lauched!";
+            }
+        }, 1000);
+    </script>
     <div class="footer">
         <ul class="footer">
             <li><a href="index.html"><i class="fas fa-house-user"></i> </a></li>
