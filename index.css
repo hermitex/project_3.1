@@ -1,0 +1,178 @@
+.background{
+    position: relative;
+    background-image: url('../images/godfather.jpg');  
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+.overlay{
+    position: absolute;   
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0a0a0a; 
+    z-index: 1 !important; 
+    opacity: 0.65;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    color: #ccc;
+   
+}
+
+#image {
+    width: 0;  
+    transition: all 0.5s ease-in-out; 
+    border: 0.01px solid #17a2b8;
+}
+
+#image img{
+    display: none;
+   
+}
+#overlay{
+    display: none;
+   
+}
+#side{
+    color: yellow
+}
+button{
+    outline: none;
+}
+.block{
+    display: block;
+    margin: auto;
+
+}
+a.block{
+  width: auto;
+  max-width: 8.5rem;
+
+}
+/* END CONTAINER*/
+
+
+/* START COUNTER */
+.inner {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height:auto;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    text-align: center;
+    padding-top: 50px;
+  }
+  #comingsoon {
+    padding: 1px;
+ 
+   
+  }
+  .light-blue{
+    color: yellow !important;
+    font-size: 1rem;
+  }
+  #countdown {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 1rem !important;
+  }
+  #countdown div {
+    padding: 5px 5px;
+    border: 1px solid #fff;
+    margin: 10px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #countdown span {
+    display: block;
+    font-size: 1.1rem !important;
+  }
+  #countdown div:first-child {
+    background: #17a2b8;
+  }
+
+
+/* Fest Info */
+.bg-black{
+    background-color: #0a0a0a;
+}
+
+  /* MEDIA QUERIES */
+  
+  @media screen and (max-width: 650px) {
+    #countdown {
+      font-size: 30px;
+     
+    }
+    #countdown div {
+      border: none;
+      background: none;
+      margin: 8px;
+    }
+    
+  }
+
+
+@media screen and (min-width: 48em){
+   
+    .background h1{
+        position: absolute;
+        float: left;
+         padding: 1rem;
+    }
+    #image{
+        position: absolute;
+        right: 0 !important;
+        padding: 1rem;               
+        width: 20rem;
+        height: 15rem;
+        background-image: url("../images/watchout.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;  
+        
+    } 
+    #image img{
+        display: block;      
+    }
+    #overlay{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        text-align: center;
+        margin: auto;
+        position: absolute; 
+        width: 20rem; 
+        height:15rem; 
+        top: 0;      
+        right: 0;       
+        background-color: #0a0a0a;
+        opacity: 0.75;       
+    }
+    #overlay p{
+        display: flex;     
+        background-color: #0a0a0a !important;
+        opacity: 0.9 !important;
+        width: 100%; 
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        text-align: center;
+        margin: auto;       
+    }
+    .inner{
+        background: none;
+    }
+}
