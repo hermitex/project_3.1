@@ -45,13 +45,14 @@
                         News
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="boston-city-news.html">Boston City News</a>
+                        <a class="dropdown-item " href="boston-city-news.html">Boston City News </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="boston-garden-news.html">Boston Garden News</a>
+                        <a class="dropdown-item active" href="boston-garden-news.html">Boston Garden News <span
+                                class="sr-only">(current)</span></a>
                     </div>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="register.html">Register <span class="sr-only">(current)</span></a>
+                <li class="nav-item ">
+                    <a class="nav-link" href="register.html">Register </a>
                 </li>
 
             </ul>
@@ -62,45 +63,17 @@
             </form>
         </div>
     </nav>
+    <div class="container-fluid p-0">
+        <div class="card bg-dark text-white">
+            <img src="./images/construction.png" alt="team" style="height: 100%; width: 100%;">
+            <div class="card-img-overlay" style="width: 22rem; margin: auto;">
+                <h3 id="small-width" class="card-title bg-dark text-center"
+                    style="opacity: 0.9; border-radius: 10px; border: 0.1px solid #17a2b8;">Under Construction</h3>
 
-    <div class="container-fluid">
-        <div class="mt">
-            <h1 id="days-to-go" class="text-center bg-dark p-1" style="color: yellow;   border-radius: 10px;"></h1>
-            <h1 class="text-primary text-center">Book Your Slot Today</h1>
+            </div>
         </div>
-
-        <form>
-            <div class="form-group">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" class="form-control" aria-describedby="first-name"
-                    placeholder="Enter First Name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="second-name">Second Name</label>
-                <input type="text" id="second-name" class="form-control" aria-describedby="second-name"
-                    placeholder="Enter Second Name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="form-control" aria-describedby="email-address"
-                    placeholder="Email Address" required>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" class="form-control" aria-describedby="phone-number"
-                    placeholder="Phone Number" required>
-            </div>
-
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="check">
-                <label class="form-check-label" for="check">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary mb-2">Book</button>
-        </form>
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -113,36 +86,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
-    <script>
-        // COUNT DOWN
 
-        const daysToGo = document.getElementById('days-to-go');
-
-
-        //time to count down to
-        const lauchTime = new Date("Aug 5, 2020 18:00:00").getTime();
-        const showCountDown = setInterval(() => {
-            //get current time
-            const now = new Date().getTime();
-            //get time remaining till launch time
-            const timeLength = lauchTime - now;
-
-            const days = Math.floor((timeLength / (1000 * 60 * 60 * 24)));
-            //	console.log(days );
-            const hours = Math.floor((timeLength % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            //console.log(hours);
-            const mins = Math.floor((timeLength % (1000 * 60 * 60)) / (1000 * 60));
-            const secs = Math.floor((timeLength % (1000 * 60)) / 1000);
-            // console.log(secs);	
-            daysToGo.innerHTML = `${days} days to go!`;
-            if (timeLength < 0) {
-                clearInterval(showCountDown);
-                countDown.style.display = "none";
-                document.getElementById("comingsoon").style.color = "#17a2b8";
-                document.getElementById("comingsoon").innerHTML = "Lauched!";
-            }
-        }, 1000);
-    </script>
     <div class="footer">
         <ul class="footer">
             <li><a href="index.html"><i class="fas fa-house-user"></i> </a></li>
