@@ -92,7 +92,7 @@
 
                     <div id="bio-content">
                         <h4 style="color: yellow;">Bio</h4>
-                        <p class="bio"><i class="fas fa-quote-right text-success fa-2x"></i>
+                        <p class="bio more"><i class="fas fa-quote-right text-success fa-2x"></i>
                             Tiberius Mairura draws from his life story when thinking about entertainment and the
                             experiences of migrant
                             workers. His first taste of entertainment began as poem writer, My Father's Hands, which
@@ -120,7 +120,7 @@
 
                     <div id="bio-content">
                         <h4 style="color: yellow;">Bio</h4>
-                        <p class="bio"><i class="fas fa-quote-right text-success fa-2x"></i>
+                        <p class="bio more"><i class="fas fa-quote-right text-success fa-2x"></i>
                             Rosa Rolaye is the CEO of Wacht it Outside who previously served as the CEO of Grand Central
                             Entertainment, an internet service for
                             business-to-business entertainment
@@ -145,7 +145,7 @@
                 <div id="bio">
                     <div id="bio-content">
                         <h4 style="color: yellow;">Bio</h4>
-                        <p class="bio"><i class="fas fa-quote-right text-success fa-2x"></i>
+                        <p class="bio more"><i class="fas fa-quote-right text-success fa-2x"></i>
                             Patric Singh opens the line of communication between clients, customers, and businesses to
                             get events done. With over 20 years in both public and private sectors, Singh has
                             experience in management consultation, team building, professional development, strategic
@@ -169,7 +169,7 @@
 
                     <div id="bio-content">
                         <h4 style="color: yellow;">Bio</h4>
-                        <p class="bio"><i class="fas fa-quote-right text-success fa-2x"></i>
+                        <p class="bio more"><i class="fas fa-quote-right text-success fa-2x"></i>
                             Joseph Dumas ensuures everything works fine and this includes communication between clients,
                             customers, and businesses to
                             esnure events run smoothly. With over 15 years in both public and private sectors, Dumas has
@@ -196,6 +196,42 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <!-- <script src="./js/clock.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            var showChar = 250;
+            var ellipsestext = "...";
+            var moretext = "more";
+            var lesstext = "less";
+            $('.more').each(function () {
+                var content = $(this).html();
+
+                if (content.length > showChar) {
+
+                    var c = content.substr(0, showChar);
+                    var h = content.substr(showChar - 1, content.length - showChar);
+
+                    var html = c + '<span class="moreelipses">' + ellipsestext + '</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+                    $(this).html(html);
+                }
+
+            });
+
+            $(".morelink").click(function () {
+                if ($(this).hasClass("less")) {
+                    $(this).removeClass("less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            });
+        });
+    </script>
+
     <div class="footer">
         <ul class="footer">
             <li><a href="index.html"><i class="fas fa-house-user"></i> </a></li>
