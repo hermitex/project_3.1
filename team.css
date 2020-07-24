@@ -30,3 +30,7 @@ a.morelink {
 .morecontent span {
 	display: none;
 }
+
+.image-landing{
+    height: 100%;
+}
