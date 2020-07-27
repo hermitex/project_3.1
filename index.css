@@ -231,4 +231,7 @@ a.morelink {
     .inner{
         background: none;
     }
+    .container#hide{
+      display: none !important;
+    }
 }
