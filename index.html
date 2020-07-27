@@ -393,11 +393,41 @@
     </div>
 
     <!-- END FILMS SECTIONS -->
+    <style>
+        #tv_container {
+            /* background: url('images/tv-png-18661.png') no-repeat top left transparent; */
+            width: 100vw;
+            /* Adjust TV image width */
+            height: 290px;
+            /* Adjust TV image height */
+            position: relative;
+            margin: auto;
+        }
 
+        #tv_container video {
+            position: absolute;
+            top: -10rem !important;
+            /* Adjust top position */
+            left: 1rem;
+            /* Adjust left position */
+        }
+    </style>
+
+    <div class="container">
+        <div class="card-img-overlay" style="position: relative; border: 1px solid red;">
+            <img class="card-img" src="./images/tv-png-18661.png" alt="Card image" style="width: 18rem;">
+            <video width="210" controls autoplay muted loop
+                style=" padding: 0; position: absolute; left: 2.2rem; bottom: 2.55rem; ">
+                <source src="videos/don-corleone-shooting-6-10-hd.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+    </div>
 
     <div class="container-fluid event-news mb-0 p-5">
         <div class="col-12 mb-2" style="border-style: none; background: none;">
             <h4 class="text-center text-info pt-1">Event News</h4>
+
         </div>
         <ul class="list-unstyled">
             <li class="media">
