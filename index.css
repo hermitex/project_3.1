@@ -234,4 +234,8 @@ a.morelink {
     .container#hide{
       display: none !important;
     }
+    .container-fluid.bg-black{
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
 }
