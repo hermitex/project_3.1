@@ -72,7 +72,7 @@
             <h1 class="text-primary text-center">Book Your Slot Today</h1>
         </div>
 
-        <form>
+        <form id="submit">
             <div class="form-group">
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" class="form-control" aria-describedby="first-name"
@@ -119,10 +119,15 @@
                 <label class="custom-control-label text-light" for="customCheck3">Citizen Kane</label>
             </div>
 
-
-
             <button type="submit" class="btn btn-primary mt-2 mb-2">Book</button>
+            <div id="hide" class="alert alert-success alert-dismissible fade show mt-0   hide" role="alert">
+                <strong>Nice!</strong> You have successfully booked your slot.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         </form>
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -138,7 +143,8 @@
 
     <script>
         // COUNT DOWN
-
+        const message = document.getElementById('hide');
+        const form = document.getElementById('submit')
         const daysToGo = document.getElementById('days-to-go');
 
 
@@ -165,6 +171,19 @@
                 document.getElementById("comingsoon").innerHTML = "Lauched!";
             }
         }, 1000);
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (message.classList.contains('hide')) {
+                message.classList.remove('hide');
+                message.classList.add('show-message');
+            } else {
+                message.classList.add('hide');
+                message.classList.remove('show-message');
+            }
+
+        })
+
     </script>
     <div class="footer">
         <ul class="footer">
